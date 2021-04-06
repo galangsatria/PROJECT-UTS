@@ -8,7 +8,8 @@ hewan(herbivora):-
     memiliki_kuku_yang_tajam(no),
     punya_enzim_pencerna_karbohidrat(yes),
     memiliki_gigi_geraham_besar(yes),
-    sebagian_besar_hewan_buas(no).
+    sebagian_besar_hewan_buas(no),
+    kemampuan_berkembang_biak_rendah(no).
 hewan(karnivora):-
     memakan_daging(yes),
     memakan_rumput(no),
@@ -17,7 +18,8 @@ hewan(karnivora):-
     memiliki_kuku_yang_tajam(yes),
     punya_enzim_pencerna_karbohidrat(no),
     memiliki_gigi_geraham_besar(no),
-    sebagian_besar_hewan_buas(yes).
+    sebagian_besar_hewan_buas(yes),
+    kemampuan_berkembang_biak_rendah(yes).
 hewan(omnivora):-
     memakan_daging(yes),
     memakan_rumput(yes),
@@ -26,7 +28,8 @@ hewan(omnivora):-
     memiliki_kuku_yang_tajam(yes),
     punya_enzim_pencerna_karbohidrat(yes),
     memiliki_gigi_geraham_besar(yes),
-    sebagian_besar_hewan_buas(no).
+    sebagian_besar_hewan_buas(no),
+    kemampuan_berkembang_biak_rendah(no).
 % End Rules (Knowledge Base)
  
 % Start User Interface
@@ -47,6 +50,8 @@ memiliki_gigi_geraham_besar(X):-
     menuask(memiliki_gigi_geraham_besar, X, [yes, no]).
 sebagian_besar_hewan_buas(X):- 
     menuask(sebagian_besar_hewan_buas, X, [yes, no]).
+kemampuan_berkembang_biak_rendah(X):-
+    menuask(kemampuan_berkembang_biak_rendah, X, [yes, no]).
  
 /* Menus for user & Remembering the answer*/
 menuask(A, V, _):-
