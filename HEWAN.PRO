@@ -10,6 +10,7 @@ hewan(herbivora):-
     memiliki_gigi_geraham_besar(yes),
     sebagian_besar_hewan_buas(no),
     kemampuan_berkembang_biak_rendah(no).
+
 hewan(karnivora):-
     memakan_daging(yes),
     memakan_rumput(no),
